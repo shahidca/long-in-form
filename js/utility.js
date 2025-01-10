@@ -27,3 +27,7 @@ function showSectionById(id){
     document.getElementById(id).classList.remove('hidden');
 
 }
+ // log out button
+ document.getElementById('log-out-button').addEventListener('click', function(){
+    window.location.href='index.html'
+})
