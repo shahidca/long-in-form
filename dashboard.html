@@ -66,9 +66,9 @@
             </div>
             <section class="text-center mt-6 space-y-4 md:space-y-0 space-x-5 ">
                 <!-- add money -->  
-                <button class="btn btn-xs border-2 space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-calendar-plus"></i> Add Money</button>
+                <button id="add-money-button" class="btn btn-xs border-2 space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-calendar-plus"></i> Add Money</button>
                 <!-- Cash out -->  
-               <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill"></i> Cash out</button>
+               <button id="cash-out-button" class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill"></i> Cash out</button>
                 <!-- Transfer Money -->  
                <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill-transfer"></i> Transfer Money</button>
                 <!-- Get Bonus -->  
@@ -76,24 +76,24 @@
                 <!-- Pay Bill -->  
                <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-brands fa-amazon-pay"></i> Pay Bill</button>
                 <!-- Transactions -->  
-                <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-transgender"></i>Transactions</button>
+                <button id="transactions-button" class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-transgender"></i>Transactions</button>
             </section>
          </section>
          <!-- Add Money form start here -->
          
-         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl container mx-auto mt-6">
+         <div id="add-money-form" class="card bg-base-100  w-full max-w-sm shrink-0 shadow-2xl container mx-auto mt-6">
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
                   <span class="label-text">Select A Bank</span>
                 </label>
-                <select class="select w-full max-w-xs input input-bordered">
+                <select id="input-select-bank" class="select w-full max-w-xs input input-bordered">
                     <option disabled selected>Select back</option>
-                    <option>Bang Aisha</option>
-                    <option>Marge</option>
-                    <option>Bart</option>
-                    <option>Lisa</option>
-                    <option>Maggie</option>
+                    <option class="input-select-bank">Bang Aisha</option>
+                    <option class="input-select-bank">Marge</option>
+                    <option class="input-select-bank">Bart</option>
+                    <option class="input-select-bank">Lisa</option>
+                    <option class="input-select-bank">Maggie</option>
                   </select>
               </div>
               <div class="form-control">
@@ -119,10 +119,46 @@
               </div>
             </form>
           </div>
+         <!-- Cash out form start here -->
+         
+         <div id="withdraw-money-form" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl container mx-auto mt-6">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Agent Number</span>
+                </label>
+                <input id="withdraw-input-agent-number" type="text" placeholder="Enter agent number" class="input input-bordered" required />
+               
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Add</span>
+                </label>
+                <input id="input-withdraw-amount" type="text" placeholder="Enter your amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="withdraw-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="withdraw-btn" class="btn btn-primary">Withdraw Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- Transactions section start here -->
+           <section id="transactions-container" class="hidden text-center 
+           mt-6">
+           <h2 class="text-2xl font-bold text-center text-gray-400 my-2">Transaction History</h2>
+
+           </section>
     </main>
     <script src="js/addmoney.js"></script>
     <script src="js/utility.js"></script>
     <script src="js/long.js"></script>
+    <script src="js/withdraw.js"></script>
+    <script src="js/feature.js"></script>
 
 </body>
 

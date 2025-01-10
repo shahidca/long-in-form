@@ -1,10 +1,10 @@
 // get input by id value
-function getInputByPhone(id){
-    const inputPhoneNumber=document.getElementById(id).value;
-    return inputPhoneNumber
+function getInputByValue(id){
+    const getInputValue=document.getElementById(id).innerText;
+    return getInputValue
 
 };
-// get input by id pin number value
+// get input by id  value
 function getInPutByValue(id){
     const pin=document.getElementById(id).value;
     const pinNumber=Number(pin)
@@ -15,4 +15,14 @@ function availableBalance(id){
     const currentBalance=document.getElementById(id).innerText;
     const currentBalanceNumber=Number(currentBalance)
     return currentBalanceNumber;
+}
+// show all section
+function showSectionById(id){
+    // section hide
+    document.getElementById('add-money-form').classList.add('hidden');
+    document.getElementById('withdraw-money-form').classList.add('hidden');
+    document.getElementById('transactions-container').classList.add('hidden');
+    // show section
+    document.getElementById(id).classList.remove('hidden');
+
 }
