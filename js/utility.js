@@ -22,6 +22,7 @@ function showSectionById(id){
     document.getElementById('add-money-form').classList.add('hidden');
     document.getElementById('withdraw-money-form').classList.add('hidden');
     document.getElementById('transactions-container').classList.add('hidden');
+    document.getElementById('transfer-form-container').classList.add('hidden')
     // show section
     document.getElementById(id).classList.remove('hidden');
 

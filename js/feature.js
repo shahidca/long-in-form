@@ -15,3 +15,8 @@ document.getElementById('transactions-button').
 addEventListener('click', function(){
     showSectionById('transactions-container');
 })
+// transfer money button
+document.getElementById('transfer-money-button').
+addEventListener('click', function(){
+    showSectionById('transfer-form-container')
+})

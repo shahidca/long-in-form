@@ -70,7 +70,7 @@
                 <!-- Cash out -->  
                <button id="cash-out-button" class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill"></i> Cash out</button>
                 <!-- Transfer Money -->  
-               <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill-transfer"></i> Transfer Money</button>
+               <button id="transfer-money-button" class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill-transfer"></i> Transfer Money</button>
                 <!-- Get Bonus -->  
                 <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"><i class="fa-brands fa-joget"></i>Get Bonus</button>
                 <!-- Pay Bill -->  
@@ -147,7 +147,37 @@
               </div>
             </form>
           </div>
+         <!-- Transfer money form start here -->
+         
+         <div id="transfer-form-container" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl container mx-auto mt-6">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">User Account Number</span>
+                </label>
+                <input  type="text" placeholder="Enter agent number" class="input input-bordered" required />
+               
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Add</span>
+                </label>
+                <input id="transfer-input-money" type="text" placeholder="Enter amount to transfer" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="transfer-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="transfer-money-btn" class="btn btn-primary">Send Now</button>
+              </div>
+            </form>
+          </div>
+
           <!-- Transactions section start here -->
+
            <section id="transactions-container" class="hidden text-center 
            mt-6">
            <h2 class="text-2xl font-bold text-center text-gray-400 my-2">Transaction History</h2>
@@ -159,6 +189,7 @@
     <script src="js/long.js"></script>
     <script src="js/withdraw.js"></script>
     <script src="js/feature.js"></script>
+    <script src="js/transfermoney.js"></script>
 
 </body>
 

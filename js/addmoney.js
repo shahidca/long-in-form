@@ -14,7 +14,7 @@ addEventListener('click',function(e){
     console.log(addMoneyPinNumber)
     const d = new Date();
 
-    if(addMoneyPinNumber===1234 && addAmountMoney!=isNaN){
+    if(addMoneyPinNumber===1234 && addAmountMoney !=isNaN){
         const myNewBalance=addAmountMoney + myCurrentBalance;
         document.getElementById('current-balance').innerText=myNewBalance;
         // transactions history added here
