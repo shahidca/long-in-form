@@ -24,27 +24,51 @@
     <!-- customize tailwind -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+            theme: {
+                extend: {
+                    colors: {
+
+                        buttonBgColor: '#0874F2',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 </head>
 
 <body class="outfit-google-font">
-    <header class="">
+    <header>
 
     </header>
-    <main>
+    <main class="mt-10 md:mt-52">
+        <!-- long in form here -->
+        <div class="card bg-base-100 container mx-auto items-center w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text text-xl font-semibold">Mobile Number</span>
+                    </label>
+                    <input type="text" placeholder="Enter your number" class="input input-bordered  " required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text text-xl font-semibold">4 Digit Pin</span>
+                    </label>
+                    <input id="input-pin-number" type="password" placeholder="4 Digit Pin" class="input input-bordered " required />
+                    
+                </div>
+                <div class="form-control mt-6">
+                    <button id="long-in-button" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
 
     </main>
     <footer>
 
     </footer>
+    <script src="js/long.js"></script>
+    <script src="js/utility.js"></script>
 
 </body>
 

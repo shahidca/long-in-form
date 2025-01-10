@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment dashboard</title>
+    <!-- google font link here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font family link here -->
+    <style>
+        .outfit-google-font {
+            font-family: "Outfit", serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+    </style>
+    <!-- daisyui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- customize tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+
+                        buttonBgColor: '#0874F2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="outfit-google-font">
+
+    <header class=" md:pt-6">
+        <nav class="p-4 md:p-0 flex justify-between items-center container mx-auto">
+            <div>
+                <p id="current-balance" class="text-4xl font-bold">45000</p>
+                <p class="text-gray-500 font-bold">Available Balance</p>
+            </div>
+            <div>
+                <button class="btn text-gray-500 font-bold space-x-3 p-4"><i
+                        class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+            </div>
+
+        </nav>
+        <div class="divider"></div>
+    </header>
+    
+    <main class="container mx-auto">
+        <!-- 🔥 Welcome to Payooo! here -->
+         <section>
+            <div class="text-center mt-6">
+                <h1 class="text-4xl font-bold">🔥 Welcome to Payooo!</h1>
+                <p class="text-xl text-gray-500 mt-2">Enjoy easy and convenient financial services with us. Cash out charge is low and </p>
+            </div>
+            <section class="text-center mt-6 space-y-4 md:space-y-0 space-x-5 ">
+                <!-- add money -->  
+                <button class="btn btn-xs border-2 space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-calendar-plus"></i> Add Money</button>
+                <!-- Cash out -->  
+               <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill"></i> Cash out</button>
+                <!-- Transfer Money -->  
+               <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-money-bill-transfer"></i> Transfer Money</button>
+                <!-- Get Bonus -->  
+                <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"><i class="fa-brands fa-joget"></i>Get Bonus</button>
+                <!-- Pay Bill -->  
+               <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-brands fa-amazon-pay"></i> Pay Bill</button>
+                <!-- Transactions -->  
+                <button class="btn btn-xs space-x-2 sm:btn-sm md:btn-md lg:btn-lg"> <i class="fa-solid fa-transgender"></i>Transactions</button>
+            </section>
+         </section>
+         <!-- Add Money form start here -->
+         
+         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl container mx-auto mt-6">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Select A Bank</span>
+                </label>
+                <select class="select w-full max-w-xs input input-bordered">
+                    <option disabled selected>Select back</option>
+                    <option>Bang Aisha</option>
+                    <option>Marge</option>
+                    <option>Bart</option>
+                    <option>Lisa</option>
+                    <option>Maggie</option>
+                  </select>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input type="text" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Add</span>
+                </label>
+                <input id="input-add-money" type="text" placeholder="Enter your amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="add-money-pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+    </main>
+    <script src="js/addmoney.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/long.js"></script>
+
+</body>
+
+</html>
